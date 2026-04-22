@@ -231,12 +231,10 @@ export default function Home() {
               >
                 Start Reading
               </button>
-              <button
-                onClick={() => scrollTo("prompt-patterns")}
-                className="px-5 py-2.5 bg-white/10 text-white rounded-lg font-medium text-sm hover:bg-white/15 transition-colors border border-white/15"
-              >
-                Prompt Patterns
-              </button>
+            </div>
+            {/* Hero Ad — below CTA buttons */}
+            <div className="mt-6">
+              <AdSlot slot="hero" className="w-full max-w-2xl" />
             </div>
           </div>
         </div>
@@ -281,6 +279,11 @@ export default function Home() {
               </div>
             </section>
 
+            {/* ── Between Section Ad: After Golden Rules ── */}
+            <div className="flex justify-center py-2">
+              <AdSlot slot="between-section" className="w-full" />
+            </div>
+
             {/* ── Section 2: Prompt Patterns ── */}
             <section id="prompt-patterns" className="relative scroll-mt-20">
               <SectionHeader
@@ -317,6 +320,11 @@ export default function Home() {
               </div>
             </section>
 
+            {/* ── Between Section Ad: After Prompt Patterns ── */}
+            <div className="flex justify-center py-2">
+              <AdSlot slot="between-section" className="w-full" />
+            </div>
+
             {/* ── Section 3: Workflow ── */}
             <section id="workflow" className="relative scroll-mt-20">
               <SectionHeader
@@ -351,6 +359,11 @@ export default function Home() {
                 ))}
               </div>
             </section>
+
+            {/* ── Between Section Ad: After Workflow ── */}
+            <div className="flex justify-center py-2">
+              <AdSlot slot="between-section" className="w-full" />
+            </div>
 
             {/* ── Section 4: AI Tools ── */}
             <section id="tools" className="relative scroll-mt-20">
@@ -406,6 +419,11 @@ export default function Home() {
               </div>
             </section>
 
+            {/* ── Between Section Ad: After AI Tools ── */}
+            <div className="flex justify-center py-2">
+              <AdSlot slot="between-section" className="w-full" />
+            </div>
+
             {/* ── Section 5: Cursor Rules ── */}
             <section id="cursor-rules" className="relative scroll-mt-20">
               <SectionHeader
@@ -460,6 +478,11 @@ export default function Home() {
               </div>
             </section>
 
+            {/* ── Between Section Ad: After Cursor Rules ── */}
+            <div className="flex justify-center py-2">
+              <AdSlot slot="between-section" className="w-full" />
+            </div>
+
             {/* ── Section 6: Common Mistakes ── */}
             <section id="mistakes" className="relative scroll-mt-20">
               <SectionHeader
@@ -496,6 +519,11 @@ export default function Home() {
               </div>
             </section>
 
+            {/* ── Between Section Ad: After Common Mistakes ── */}
+            <div className="flex justify-center py-2">
+              <AdSlot slot="between-section" className="w-full" />
+            </div>
+
             {/* ── Section 7: Rescue Kit ── */}
             <section id="rescue" className="relative scroll-mt-20">
               <SectionHeader
@@ -523,6 +551,11 @@ export default function Home() {
                 ))}
               </div>
             </section>
+
+            {/* ── Between Section Ad: After Rescue Kit ── */}
+            <div className="flex justify-center py-2">
+              <AdSlot slot="between-section" className="w-full" />
+            </div>
 
             {/* ── Section 8: Model Guide ── */}
             <section id="models" className="relative scroll-mt-20">
@@ -556,6 +589,11 @@ export default function Home() {
               </div>
             </section>
 
+            {/* ── Between Section Ad: After Model Guide ── */}
+            <div className="flex justify-center py-2">
+              <AdSlot slot="between-section" className="w-full" />
+            </div>
+
             {/* ── Section 9: Shortcuts ── */}
             <section id="shortcuts" className="relative scroll-mt-20">
               <SectionHeader
@@ -586,6 +624,11 @@ export default function Home() {
                 ))}
               </div>
             </section>
+
+            {/* ── Between Section Ad: After Shortcuts ── */}
+            <div className="flex justify-center py-2">
+              <AdSlot slot="between-section" className="w-full" />
+            </div>
 
             {/* ── Section 10: Resources ── */}
             <section id="resources" className="relative scroll-mt-20">

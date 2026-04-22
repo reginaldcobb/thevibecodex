@@ -5,7 +5,7 @@
 // Ad slot ID: found in your AdSense dashboard per ad unit
 
 interface AdSlotProps {
-  slot: "sidebar-top" | "sidebar-bottom" | "inline" | "footer";
+  slot: "sidebar-top" | "sidebar-bottom" | "inline" | "footer" | "hero" | "between-section";
   className?: string;
 }
 
@@ -15,10 +15,12 @@ const ADSENSE_PUBLISHER_ID = "ca-pub-XXXXXXXXXXXXXXXXX"; // Replace with your Pu
 
 export function AdSlot({ slot, className = "" }: AdSlotProps) {
   const slotConfig: Record<string, { adSlot: string; width: number; height: number; label: string }> = {
-    "sidebar-top": { adSlot: "XXXXXXXXXX", width: 300, height: 250, label: "300×250 Sidebar" },
-    "sidebar-bottom": { adSlot: "XXXXXXXXXX", width: 300, height: 250, label: "300×250 Sidebar" },
-    "inline": { adSlot: "XXXXXXXXXX", width: 728, height: 90, label: "728×90 Leaderboard" },
-    "footer": { adSlot: "XXXXXXXXXX", width: 728, height: 90, label: "728×90 Footer" },
+    "sidebar-top":      { adSlot: "XXXXXXXXXX", width: 300, height: 250, label: "300×250 Sidebar" },
+    "sidebar-bottom":   { adSlot: "XXXXXXXXXX", width: 300, height: 250, label: "300×250 Sidebar" },
+    "inline":           { adSlot: "XXXXXXXXXX", width: 728, height: 90,  label: "728×90 Leaderboard" },
+    "footer":           { adSlot: "XXXXXXXXXX", width: 728, height: 90,  label: "728×90 Footer" },
+    "hero":             { adSlot: "XXXXXXXXXX", width: 728, height: 90,  label: "728×90 Hero" },
+    "between-section":  { adSlot: "XXXXXXXXXX", width: 728, height: 90,  label: "728×90 In-Content" },
   };
 
   const config = slotConfig[slot];
