@@ -26,6 +26,10 @@ export function ThemeProvider({
       const stored = localStorage.getItem("theme");
       return (stored as Theme) || defaultTheme;
     }
+    // Respect OS-level color scheme preference (prefers-color-scheme)
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
     return defaultTheme;
   });
 
