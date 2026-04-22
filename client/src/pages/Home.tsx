@@ -7,6 +7,7 @@
  */
 
 import { useState, useEffect, useRef } from "react";
+import { Link } from "wouter";
 import { CopyButton } from "@/components/CopyButton";
 import { AdSlot } from "@/components/AdSlot";
 import {
@@ -678,7 +679,7 @@ export default function Home() {
       {/* ── Footer ── */}
       <footer className="border-t border-white/8 mt-8">
         <div className="container py-8">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
             <div className="flex items-center gap-2">
               <div className="w-6 h-6 rounded bg-primary flex items-center justify-center">
                 <span className="text-white font-bold text-xs" style={{ fontFamily: "Syne, sans-serif" }}>VC</span>
@@ -689,6 +690,22 @@ export default function Home() {
               thevibecodex.com · A free reference for AI-assisted developers · Updated monthly
             </p>
             <p className="text-xs text-muted-foreground font-mono">v1.0.0</p>
+          </div>
+          <div className="border-t border-white/5 pt-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="flex items-center gap-4 text-xs text-muted-foreground">
+              <Link href="/privacy">
+                <span className="hover:text-foreground transition-colors cursor-pointer">Privacy Policy</span>
+              </Link>
+              <Link href="/terms">
+                <span className="hover:text-foreground transition-colors cursor-pointer">Terms of Service</span>
+              </Link>
+              <a href="mailto:support@thevibecodex.com" className="hover:text-foreground transition-colors">
+                support@thevibecodex.com
+              </a>
+            </div>
+            <p className="text-xs text-muted-foreground/50">
+              © {new Date().getFullYear()} The Vibe Codex. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
