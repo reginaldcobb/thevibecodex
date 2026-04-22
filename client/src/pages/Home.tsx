@@ -416,25 +416,29 @@ export default function Home() {
               <div className="space-y-4">
                 {cursorRules.map((rule, i) => (
                   <div key={i} className="rounded-xl border border-white/8 bg-card overflow-hidden">
-                    <button
-                      className="w-full flex items-center justify-between p-5 hover:bg-white/3 transition-colors text-left"
-                      onClick={() => setExpandedCursorRule(expandedCursorRule === i ? null : i)}
-                    >
-                      <div>
-                        <h3 className="font-semibold text-foreground" style={{ fontFamily: "Syne, sans-serif" }}>
-                          {rule.name}
-                        </h3>
-                        <p className="text-xs text-muted-foreground mt-0.5">{rule.description}</p>
-                      </div>
-                      <div className="flex items-center gap-2 ml-4">
+                    <div className="flex items-center">
+                      <button
+                        className="flex-1 flex items-center justify-between p-5 hover:bg-white/3 transition-colors text-left"
+                        onClick={() => setExpandedCursorRule(expandedCursorRule === i ? null : i)}
+                      >
+                        <div>
+                          <h3 className="font-semibold text-foreground" style={{ fontFamily: "Syne, sans-serif" }}>
+                            {rule.name}
+                          </h3>
+                          <p className="text-xs text-muted-foreground mt-0.5">{rule.description}</p>
+                        </div>
+                        <div className="flex items-center gap-2 ml-4">
+                          {expandedCursorRule === i ? (
+                            <ChevronUp size={16} className="text-muted-foreground flex-shrink-0" />
+                          ) : (
+                            <ChevronDown size={16} className="text-muted-foreground flex-shrink-0" />
+                          )}
+                        </div>
+                      </button>
+                      <div className="pr-4">
                         <CopyButton text={rule.rule} />
-                        {expandedCursorRule === i ? (
-                          <ChevronUp size={16} className="text-muted-foreground flex-shrink-0" />
-                        ) : (
-                          <ChevronDown size={16} className="text-muted-foreground flex-shrink-0" />
-                        )}
                       </div>
-                    </button>
+                    </div>
                     {expandedCursorRule === i && (
                       <div className="px-5 pb-5">
                         <div className="prompt-block text-white/80 text-xs">{rule.rule}</div>
